@@ -10,4 +10,5 @@ export class AppComponent {
   title = 'tensorApp';
 
   linearModel: tf.Sequential;
+  prediction: any;
 }
