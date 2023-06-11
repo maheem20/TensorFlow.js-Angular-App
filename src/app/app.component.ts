@@ -9,7 +9,7 @@ import * as tf from '@tensorflow/tfjs';
 export class AppComponent implements OnInit {
   title = 'tensorApp';
 
-  linearModel: tf.Sequential;
+  linearModel: tf.Sequential | undefined;
   prediction: any;
 
   ngOnInit() {
