@@ -34,4 +34,9 @@ export class AppComponent implements OnInit {
     await this.linearModel.fit(xs, ys);
     console.log('model trained!');
   }
+
+  linearPrediction(val: number) {
+    const output = this.linearModel.predict(tf.tensor2d([val], [1, 1])) as any;
+    this.prediction = Array.from(output.dataSync())[0];
+  }
 }
